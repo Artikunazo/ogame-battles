@@ -1,16 +1,17 @@
 <?php
 
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
-use Slim\Factory\AppFactory;
+// Kickstart the framework
+$f3=require('lib/base.php');
 
-require __DIR__ . '/vendor-battles/vendor/autoload.php';
+$f3->set('DEBUG',1);
+if ((float)PCRE_VERSION<7.9)
+	trigger_error('PCRE version is out of date');
 
-$app = AppFactory::create();
+// Load configuration
+$f3->config('config.ini');
 
-$app->get('/index.php', function(Request $request, Response $response, $args){
-    $response->getBody()->write('Miau');
-    return $response;
+$f3->route('GET /', function($f3){
+	echo "Miau";
 });
 
-$app->run();
+$f3->run();

@@ -7,11 +7,17 @@ $f3->set('DEBUG',1);
 if ((float)PCRE_VERSION<7.9)
 	trigger_error('PCRE version is out of date');
 
+
+if($f3->get('DEBUG') > 0){
+	$f3->set('base_route', 'http://' . $f3->get('HOST') . $f3->get('PORT') . '/');
+} else {
+	$f3->set('base_route', 'http://' . $f3->get('HOST') . '/battles-ogame/');
+}
 // Load configuration
 $f3->config('config.ini');
 
 $f3->route('GET /', function($f3){
-	echo "Miau";
+	echo \View::instance()->render('index.html');
 });
 
 $f3->run();

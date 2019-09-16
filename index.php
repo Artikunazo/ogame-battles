@@ -16,8 +16,6 @@ if($f3->get('DEBUG') > 0){
 // Load configuration
 $f3->config('config.ini');
 
-$f3->route('GET /', function($f3){
-	echo \View::instance()->render('index.html');
-});
+$f3->route('GET /', 'controllers\cBattles::showAllBattles');
 
 $f3->run();

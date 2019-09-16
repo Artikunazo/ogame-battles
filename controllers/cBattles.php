@@ -1,6 +1,13 @@
 <?php
 
+/**
+ * @author Artikunazo
+ * @version 1.0
+ */
+
 namespace controllers;
+
+use models\mBattles;
 
 class cBattles{
     public static function showAllbattles($f3){

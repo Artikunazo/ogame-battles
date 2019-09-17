@@ -17,5 +17,6 @@ if($f3->get('DEBUG') > 0){
 $f3->config('config.ini');
 
 $f3->route('GET /', 'controllers\cBattles::showAllBattles');
+$f3->rpute('GET /add-battle', 'controllers\cBattles::addNewBattle');
 
 $f3->run();

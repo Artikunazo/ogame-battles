@@ -23,4 +23,13 @@ class cBattles{
     private static function getAllBattles(){
         return mBattles::getAllBattles();
     }
+
+    public static function addNewBattle($f3){
+        $f3->set('title', 'Todas las batallas');
+        echo \Template::instance()->render('vHeader.html');
+
+        echo \View::instance()->render('vAddBattle.html');
+
+        echo \View::instance()->render('vFooter.html');
+    }
 }

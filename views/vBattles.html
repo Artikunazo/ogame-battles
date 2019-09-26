@@ -1,4 +1,13 @@
 <body>
-    <p>{{@battles}}</p>
-    
+    <repeat group="{{@battles}}" key="{{@key}}" value="{{@battle}}">
+        <p>{{@key}}</p>
 
+        <p>
+            <repeat group={{@battle}} key="{{@key1}}" value="{{@details}}">
+                <repeat group="{{@details}}" value="{{@details2}}">
+                    <span>{{@details2}}</span>
+                </repeat>
+                
+            </repeat>
+        </p>
+    </repeat>

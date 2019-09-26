@@ -2,19 +2,19 @@
     <section>
         <div class="columns">
             <div class="column">
-                <h2>Battalas ogame</h2>
+                <h2 class="title">Battallas ogame</h2>
             </div>
         </div>
 
         <p>&nbsp;</p>
 
         <div class="columns">
-            <div class="column">
+            <div class="column is-8 is-half is-offset-2">
                 <form id="frmAddBattle" autocomplete="off">
                     <div class="field">
                         <label class="label" for="tbBannerBattle">Banner</label>
                         <div class="control">
-                            <input class="input" type="text" name="tbBannerBattle" name="tbBannerBattle" />
+                            <input class="input" type="text" name="tbBannerBattle" id="tbBannerBattle" />
                         </div>
                     </div>
 
@@ -23,6 +23,10 @@
                         <div class="control">
                             <textarea class="textarea" name="taSummaryBattle" id="taSummaryBattle"></textarea>
                         </div>
+                    </div>
+
+                    <div class="field">
+                        <input type="button" id="btnAddBattle" class="button is-success is-rounded" value="Submit pvto!" />
                     </div>
                 </form>
             </div>

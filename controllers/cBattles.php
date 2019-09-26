@@ -20,7 +20,7 @@ class cBattles{
         for($i = 0; $i < count($allBattles); $i++){
             $battlesConverted[$i] = [
                 $battle['banner'] = $allBattles[$i]['banner'],
-                $battle['summary'] = base64_decode($allBattles[$i]['summary'])
+                $battle['summary'] = $allBattles[$i]['summary']
             ];
         }
 
@@ -54,7 +54,7 @@ class cBattles{
         exit(
             json_encode(
                 [
-                    'response' => $response
+                    'message' => $response
                 ]
             )
         );

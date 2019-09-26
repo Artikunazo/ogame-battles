@@ -9,7 +9,7 @@ if ((float)PCRE_VERSION<7.9)
 
 
 if($f3->get('DEBUG') > 0){
-	$f3->set('base_route', 'http://' . $f3->get('HOST') . ':' . $f3->get('PORT') . '/battles-ogame/');
+	$f3->set('base_route', 'http://' . $f3->get('HOST') . ':' . $f3->get('PORT') . '/');
 } else {
 	$f3->set('base_route', 'http://' . $f3->get('HOST') . '/battles-ogame/');
 }
